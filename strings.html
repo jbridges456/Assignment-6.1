@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret Message</title>
+    <style>
+        /* Add some creative elements for better user experience */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff; /* Light blue background */
+            color: #333;
+            margin: 20px;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: auto;
+        }
+
+        input {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #message {
+            display: none; /* Initially hide the secret message */
+            margin-top: 20px;
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <!-- Comment: Your name goes here -->
+    <!-- Author: Your Name -->
+    <h1>Access the Secret Message</h1>
+    
+    <!-- Form with inputs for first name, last name, and zip code -->
+    <form id="secretForm" onsubmit="validateForm(event)">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required>
+
+        <label for="zipCode">Zip Code:</label>
+        <input type="text" id="zipCode" name="zipCode" required>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- Section where the secret message will be displayed -->
+    <div id="message">
+        <p>Congratulations! You have unlocked the secret message.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
